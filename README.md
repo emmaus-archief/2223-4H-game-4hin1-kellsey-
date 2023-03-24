@@ -18,3 +18,24 @@ https://emmauscollege.github.io/informatica/game/
 - icon <br>
         http://www.iconarchive.com/show/android-lollipop-icons-by-dtafalonso/Play-Games-icon.html
 - ...
+
+
+## Mijn plan
+Ik ga een horizontale shooter maken
+
+Basis game:
+1. zet speler links
+2. beweeg speler met upo en down pijlen
+3. zorg dat spekler het scherm nit uit kan
+4. teken vijandd
+5. laat vijand bwegen naar links
+6. als links bij de rand, dan weer op een nieuwe plek zetten dioe vijand
+7. als vijand voorbij is hgegaan, punt erbj
+8. als spoeler bvijand raakt dan game over
+
+uitbreidoinmgen (nog verde ruitwerken):
+- meer bvijanden
+- kunnen shieten
+- achtergrond plaatje
+- bewegend achetrgroindplaatje
+- ...

@@ -56,8 +56,12 @@ var verwerkBotsing = function() {
  */
 var tekenAlles = function() {
   // achtergrond
-
+   fill("green");
   // vijand
+ fill("red");
+  rect(spelerX - 25, spelerY - 100, 50, 50);
+  fill("black");
+  ellipse(spelerX, spelerY, 10, 10);
 
   // kogel
 
