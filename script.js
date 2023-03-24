@@ -32,10 +32,10 @@ var spelerY = 200; // y-positie van speler
 var beweegAlles = function() {
   // speler
   if (keyIsDown(38)){
-    spelerY = spelerY -1;
+    spelerY = spelerY -4;
   }
   if (keyIsDown(40)){
-    spelerY = spelerY +1;
+    spelerY = spelerY +4;
   }
   // vijand
 
@@ -61,7 +61,8 @@ var verwerkBotsing = function() {
  */
 var tekenAlles = function() {
   // achtergrond
-   
+   fill("blue")
+  rect(0, 0, 1280, 720)
   // vijand
  
 
