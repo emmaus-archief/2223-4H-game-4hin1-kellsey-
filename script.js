@@ -22,7 +22,7 @@ var spelStatus = SPELEN;
 var spelerX = 200; // x-positie van speler
 var spelerY = 200; // y-positie van speler
 
-var vijandX = 800; // x-positie van vijand
+var vijandX = 1280; // x-positie van vijand
 var vijandY = 200; // y-positie van vijand
 
 /* ********************************************* */
@@ -41,7 +41,7 @@ var beweegAlles = function() {
     spelerY = spelerY +5;
   }
   // vijand
-  vijandX = vijandX -10;
+  vijandX = vijandX -10
 
   // kogel
 };
