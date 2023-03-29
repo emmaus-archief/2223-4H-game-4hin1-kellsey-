@@ -22,8 +22,11 @@ var spelStatus = SPELEN;
 var spelerX = 200; // x-positie van speler
 var spelerY = 200; // y-positie van speler
 
-var vijandX = 1280; // x-positie van vijand
+var vijandX = 1000; // x-positie van vijand
 var vijandY = 200; // y-positie van vijand
+
+var rotsX = 700; // x-positie van rots
+var rotsY = 200; // y-positie van rots
 
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
@@ -40,10 +43,23 @@ var beweegAlles = function() {
   if (keyIsDown(40)){
     spelerY = spelerY +5;
   }
+  if (spelerY < 20){
+    spelerY = 20;
+  }
+  if (spelerY > 700){
+    spelerY = 700;
+  }
   // vijand
-  vijandX = vijandX -10
+  vijandY = vijandY -5
+  if (vijandY < 0){
+    vijandY = 720;
+  }
 
   // kogel
+
+  //rots
+  rotsY = rotsY -10
+  
 };
 
 /**
@@ -86,6 +102,12 @@ var tekenAlles = function() {
   rect(spelerX - 25, spelerY - 25, 50, 50);
   fill("black");
   ellipse(spelerX, spelerY, 10, 10);
+
+  //rots
+  fill("grey");
+  rect(rotsX - 25, rotsY - 25, 50, 50);
+  fill("black");
+  ellipse(rotsX, rotsY, 10, 10);
 
   // punten en health
 
