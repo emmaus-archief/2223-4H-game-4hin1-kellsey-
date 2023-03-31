@@ -50,15 +50,14 @@ var beweegAlles = function() {
     spelerY = 700;
   }
   // vijand
-  vijandY = vijandY -5
-  if (vijandY < 0){
-    vijandY = 720;
+  vijandX = vijandX -10;
+  if (vijandX < 0){
+    vijandX = 1280;
   }
 
   // kogel
 
-  //rots
-  rotsY = rotsY -10
+  
   
 };
 
