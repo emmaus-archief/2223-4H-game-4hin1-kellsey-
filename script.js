@@ -50,9 +50,10 @@ var beweegAlles = function() {
     spelerY = 700;
   }
   // vijand
-  vijandX = vijandX -10;
+  vijandX = vijandX -15;
   if (vijandX < 0){
     vijandX = 1280;
+    vijandY = random(1, 700);
   }
 
   // kogel
