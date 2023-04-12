@@ -25,17 +25,17 @@ Ik ga een horizontale shooter maken
 
 Basis game:
 1. zet speler links
-2. beweeg speler met upo en down pijlen
-3. zorg dat spekler het scherm nit uit kan
-4. teken vijandd
-5. laat vijand bwegen naar links
-6. als links bij de rand, dan weer op een nieuwe plek zetten dioe vijand
-7. als vijand voorbij is hgegaan, punt erbj
-8. als spoeler bvijand raakt dan game over
+2. beweeg speler met up en down pijlen
+3. zorg dat speler het scherm niet uit kan
+4. teken vijand
+5. laat vijand bewegen naar links
+6. als links bij de rand, dan weer op een nieuwe plek zetten die vijand
+7. als vijand voorbij is gegaan, punt erbj
+8. als speler vijand raakt dan game over
 
 uitbreidoinmgen (nog verde ruitwerken):
-- meer bvijanden
-- kunnen shieten
+- meer vijanden
+- kunnen schieten
 - achtergrond plaatje
-- bewegend achetrgroindplaatje
+- bewegend achtergrondplaatje
 - ...
