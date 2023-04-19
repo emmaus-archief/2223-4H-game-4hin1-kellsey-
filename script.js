@@ -17,13 +17,14 @@
 /* ********************************************* */
 const SPELEN = 1;
 const GAMEOVER = 2;
+const UITLEG = 8;
 var spelStatus = SPELEN;
 
 var spelerX = 200; // x-positie van speler
 var spelerY = 200; // y-positie van speler
 
-var vijandX = 1000; // x-positie van vijand
-var vijandY = 200; // y-positie van vijand
+var vijandX = 1280; // x-positie van vijand
+var vijandY = 300; // y-positie van vijand
 
  // y-positie van rots
 
@@ -54,6 +55,7 @@ var beweegAlles = function() {
     vijandX = 1280;
     vijandY = random(1, 700);
   }
+  
 
   // kogel
 
@@ -72,7 +74,7 @@ var verwerkBotsing = function() {
       spelerX - vijandX >-50 &&
      spelerY - vijandY <50 &&
      spelerY - vijandY >-50){
-    console.log("botsing")
+    console.log("Botsing");
      }
 
   // botsing kogel tegen vijand
@@ -115,6 +117,13 @@ var tekenAlles = function() {
  */
 var checkGameOver = function() {
   // check of HP 0 is , of tijd op is, of ...
+   if (spelerX - vijandX <50 &&
+      spelerX - vijandX >-50 &&
+     spelerY - vijandY <50 &&
+     spelerY - vijandY >-50){
+    console.log("Botsing");
+     return true;
+     }
   return false;
 };
 
@@ -148,9 +157,16 @@ function draw() {
     if (checkGameOver()) {
       spelStatus = GAMEOVER;
     }
+    console.log("spelen")
   }
   if (spelStatus === GAMEOVER) {
     // teken game-over scherm
-
+   console.log("game-over")
+    textSize(20);
+    fill("white");
+    text("gameover, druk enter om opnieuw te spelen", 100, 100);
+    if(keyIsDown(13)){ //enter
+      spelStatus = SPELEN;
+    }
   }
 }
