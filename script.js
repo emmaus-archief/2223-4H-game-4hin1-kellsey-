@@ -37,10 +37,10 @@ var vijandY = 300; // y-positie van vijand
  */
 var beweegAlles = function() {
   // speler
-  if (keyIsDown(38)){
+  if (keyIsDown(87)){ // [w] key
     spelerY = spelerY -5;
   }
-  if (keyIsDown(40)){
+  if (keyIsDown(83)){ // [s] key
     spelerY = spelerY +5;
   }
   if (spelerY < 20){
@@ -162,11 +162,13 @@ function draw() {
   if (spelStatus === GAMEOVER) {
     // teken game-over scherm
    console.log("game-over")
-    textSize(20);
+    textSize(50);
     fill("white");
     text("gameover, druk enter om opnieuw te spelen", 100, 100);
     if(keyIsDown(13)){ //enter
       spelStatus = SPELEN;
+      vijandX = 1280
+      vijandY = random(1, 700)
     }
   }
 }
