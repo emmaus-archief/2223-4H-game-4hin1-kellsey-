@@ -109,6 +109,7 @@ var tekenAlles = function() {
 
 
   // punten en health
+  
 
 };
 
