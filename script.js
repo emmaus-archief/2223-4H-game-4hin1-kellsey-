@@ -54,6 +54,7 @@ var beweegAlles = function() {
   if (vijandX < 0){
     vijandX = 1280;
     vijandY = random(1, 700);
+    punten = punten + 1;
   }
   
 
@@ -158,6 +159,7 @@ function draw() {
       spelStatus = GAMEOVER;
     }
     console.log("spelen")
+    
   }
   if (spelStatus === GAMEOVER) {
     // teken game-over scherm
