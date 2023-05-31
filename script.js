@@ -26,6 +26,7 @@ var spelerY = 200; // y-positie van speler
 var vijandX = 1280; // x-positie van vijand
 var vijandY = 300; // y-positie van vijand
 
+var img;
  // y-positie van rots
 
 /* ********************************************* */
@@ -164,9 +165,12 @@ function draw() {
   if (spelStatus === GAMEOVER) {
     // teken game-over scherm
    console.log("game-over")
+    fill("blue") //background
+    rect(0, 0, 1280, 720)
     textSize(50);
     fill("white");
-    text("gameover, druk enter om opnieuw te spelen", 100, 100);
+    text("gameover, druk enter om opnieuw te spelen", 150, 300);
+    image("edward.jpeg", 300, 500)
     if(keyIsDown(13)){ //enter
       spelStatus = SPELEN;
       vijandX = 1280
