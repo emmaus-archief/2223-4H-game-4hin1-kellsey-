@@ -27,6 +27,9 @@ var vijandX = 1280; // x-positie van vijand
 var vijandY = 300; // y-positie van vijand
 
 var img;
+let bg;
+let y = 0;
+
  // y-positie van rots
 
 /* ********************************************* */
@@ -143,7 +146,12 @@ function setup() {
   createCanvas(1280, 720);
 
   // Kleur de achtergrond blauw, zodat je het kunt zien
-  background('blue');
+background("blue")
+  // The background image must be the same size as the parameters
+  // into the createCanvas() method. In this program, the size of
+  // the image is 720x400 pixels.
+  bg = loadImage('bos2.webp');
+  createCanvas(1280, 720);
 }
 
 /**
@@ -158,6 +166,15 @@ function draw() {
     tekenAlles();
     if (checkGameOver()) {
       spelStatus = GAMEOVER;
+       background(bg);
+
+  stroke(226, 204, 0);
+  line(0, y, width, y);
+
+  y++;
+  if (y > height) {
+    y = 0;
+  }
     }
     console.log("spelen")
     
