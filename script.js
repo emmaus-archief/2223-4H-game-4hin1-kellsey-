@@ -27,8 +27,6 @@ var vijandX = 1280; // x-positie van vijand
 var vijandY = 300; // y-positie van vijand
 
 var img;
-let bg;
-let y = 0;
 
  // y-positie van rots
 
@@ -107,7 +105,7 @@ var tekenAlles = function() {
   rect(spelerX - 25, spelerY - 25, 50, 50);
   fill("black");
   ellipse(spelerX, spelerY, 10, 10);
-
+  image(img, spelerX, spelerY, 50, 50);
   //rots
 
 
@@ -135,7 +133,9 @@ var checkGameOver = function() {
 /* ********************************************* */
 /* setup() en draw() functies / hoofdprogramma   */
 /* ********************************************* */
-
+function preload() {
+  img = loadImage('bella.jpeg');
+}
 /**
  * setup
  * de code in deze functie wordt één keer uitgevoerd door
@@ -150,8 +150,6 @@ background("blue")
   // The background image must be the same size as the parameters
   // into the createCanvas() method. In this program, the size of
   // the image is 720x400 pixels.
-  bg = loadImage('bos2.webp');
-  createCanvas(1280, 720);
 }
 
 /**
@@ -166,19 +164,9 @@ function draw() {
     tekenAlles();
     if (checkGameOver()) {
       spelStatus = GAMEOVER;
-       background(bg);
-
-  stroke(226, 204, 0);
-  line(0, y, width, y);
-
-  y++;
-  if (y > height) {
-    y = 0;
-  }
     }
     console.log("spelen")
     
-  }
   if (spelStatus === GAMEOVER) {
     // teken game-over scherm
    console.log("game-over")
